@@ -1,0 +1,70 @@
+<!-- research.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Group | Research</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script>
+    function toggleDetails(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-white text-black">
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Aggies Lab</h1>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="people.html">People</a>
+        <a href="research.html" class="active">Research</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto py-12 px-4">
+    <h2 class="text-4xl font-bold text-maroon mb-8">Research Highlights</h2>
+    <p class="text-lg text-gray-800 mb-10">Our lab tackles a variety of projects ranging from fundamental science to applied technology. Here are a few of our featured works:</p>
+
+    <div class="space-y-8">
+      <!-- Project Card 1 -->
+      <div class="research-card">
+        <h3 class="card-title">Project Atlas: Mapping Neural Interfaces</h3>
+        <p>An interdisciplinary effort to design and test high-fidelity brain-machine interface systems for medical applications.</p>
+        <button onclick="toggleDetails('details-atlas')" class="card-button">Show More</button>
+        <div id="details-atlas" class="hidden mt-3 text-gray-700 text-sm">
+          This project investigates long-term biocompatibility, signal fidelity, and software decoding mechanisms in real-time control scenarios. Our team collaborates with neurologists and bioengineers.
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="research-card">
+        <h3 class="card-title">Smart Materials for Environmental Sensing</h3>
+        <p>Developing polymer-based systems that change properties in response to pollutants and stressors.</p>
+        <button onclick="toggleDetails('details-materials')" class="card-button">Show More</button>
+        <div id="details-materials" class="hidden mt-3 text-gray-700 text-sm">
+          These sensors aim to provide affordable, distributed environmental monitoring in areas with limited access to conventional equipment. In collaboration with chemical engineering and sustainability teams.
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="research-card">
+        <h3 class="card-title">AI-Augmented Diagnostics</h3>
+        <p>Integrating deep learning algorithms into clinical workflows to support early disease detection.</p>
+        <button onclick="toggleDetails('details-ai')" class="card-button">Show More</button>
+        <div id="details-ai" class="hidden mt-3 text-gray-700 text-sm">
+          This research explores model interpretability, ethical data sourcing, and system validation in medical settings. Joint effort with local hospitals and health informatics programs.
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
