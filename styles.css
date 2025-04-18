@@ -1,0 +1,68 @@
+
+/* assets/styles.css */
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar {
+  background-color: #500000;
+  color: white;
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  text-decoration: underline;
+  color: #f0e6e6;
+}
+
+.text-maroon {
+  color: #500000;
+}
+
+.research-card {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #500000;
+  margin-bottom: 0.5rem;
+}
+
+.card-button {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #500000;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
