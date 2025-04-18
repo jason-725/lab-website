@@ -1,0 +1,79 @@
+<!-- members.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab Group | People</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    function filterTeam(role) {
+      const cards = document.querySelectorAll('[data-role]');
+      cards.forEach(card => {
+        if (role === 'all' || card.dataset.role === role) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+    function toggleBio(id) {
+      const bio = document.getElementById(id);
+      bio.classList.toggle('hidden');
+    }
+  </script>
+</head>
+<body class="bg-white text-gray-900">
+  <header class="bg-[#500000] text-white py-4 px-6">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Lab Group Name</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Home</a>
+        <a href="members.html" class="hover:underline">Members</a>
+        <a href="research.html" class="hover:underline">Research</a>
+        <a href="about.html" class="hover:underline">About</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto py-12 px-4">
+    <h2 class="text-4xl font-bold text-[#500000] mb-8">Our Team</h2>
+    <p class="text-lg text-gray-700 mb-6">We are a multidisciplinary group of scientists, engineers, and students working together to advance knowledge in our field. Meet the people behind the research:</p>
+
+    <div class="mb-8 flex gap-4 flex-wrap">
+      <button onclick="filterTeam('all')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">All</button>
+      <button onclick="filterTeam('pi')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">Faculty</button>
+      <button onclick="filterTeam('phd')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">PhD Students</button>
+      <button onclick="filterTeam('undergrad')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">Undergraduates</button>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Team Member Card -->
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="pi">
+        <img src="assets/member1.jpg" alt="Dr. Jane Doe" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold">Dr. Jane Doe</h3>
+        <p class="text-[#500000]">Principal Investigator</p>
+        <button onclick="toggleBio('bio-jane')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
+        <p id="bio-jane" class="text-gray-600 text-sm mt-2 hidden">Dr. Doe leads the lab’s research efforts in [specialization] and mentors both undergraduate and graduate students.</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="phd">
+        <img src="assets/member2.jpg" alt="John Smith" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold">John Smith</h3>
+        <p class="text-[#500000]">PhD Student</p>
+        <button onclick="toggleBio('bio-john')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
+        <p id="bio-john" class="text-gray-600 text-sm mt-2 hidden">John's research focuses on [topic]. He is currently developing tools to improve [application].</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/member3.jpg" alt="Sarah Lee" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold">Sarah Lee</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+        <button onclick="toggleBio('bio-sarah')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
+        <p id="bio-sarah" class="text-gray-600 text-sm mt-2 hidden">Sarah assists with lab experiments and data analysis in support of the ongoing [project name] project.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
