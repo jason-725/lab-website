@@ -4,35 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lab Group | People</title>
+  <title>AGGIES Lab | Members</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
   <script>
-    function filterTeam(role) {
-      const cards = document.querySelectorAll('[data-role]');
-      cards.forEach(card => {
-        if (role === 'all' || card.dataset.role === role) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-    function toggleBio(id) {
-      const bio = document.getElementById(id);
-      bio.classList.toggle('hidden');
+    function toggleDetails(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle('hidden');
     }
   </script>
 </head>
-<body class="bg-white text-gray-900">
-  <header class="bg-[#500000] text-white py-4 px-6">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">Lab Group Name</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Home</a>
-        <a href="members.html" class="hover:underline">Members</a>
-        <a href="research.html" class="hover:underline">Research</a>
-        <a href="about.html" class="hover:underline">About</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
+<body class="bg-white text-black">
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">AGGIES Lab</h1>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="members.html" class="active">Members</a>
+        <a href="research.html">Research</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
