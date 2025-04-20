@@ -1,23 +1,26 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AGGIES Lab | Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="bg-white text-gray-900">
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">AGGIES Lab</h1>
+      <div class="logo flex items-center space-x-2">
+        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto">
+        <span>AGGIES Lab</span>
+      </div>
       <nav class="nav-links">
         <a href="index.html" class="active">Home</a>
         <a href="members.html">Members</a>
         <a href="research.html">Research</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
+        <a href="resources.html">Other Resources</a>
       </nav>
     </div>
   </header>
@@ -29,15 +32,116 @@
     </div>
   </section>
 
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Faculty</h2>
+      
+      <!-- Flex container for name and image -->
+      <div class="flex flex-col md:flex-row items-start gap-6 mb-12">
+        <!-- Text Info -->
+        <div class="flex-1 space-y-2">
+          <h3 class="text-2xl font-semibold text-[#500000]">Shreyas Kumar</h3>
+          <h4 class="text-xl font-semibold text-[#500000]">Professor of Practice</h4>
+          <p class="text-gray-700">Department of Computer Science and Engineering</p>
+          <p class="text-gray-700">Department of Multidisciplinary Engineering (Joint Courtesy Faculty Appointment)</p>
+        </div>
+
+        <!-- Image -->
+        <div class="flex-shrink-0">
+          <img src="assets/prof.jpg" alt="Professor Kumar" class="w-[200px] h-[300px] object-cover rounded-lg shadow-md">
+        </div>
+      </div>
+
+      <!-- Teaching Section -->
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Teaching</h2>
+
+        <!-- Fall 2025 -->
+        <div class="mb-10">
+          <h3 class="text-2xl font-semibold text-[#500000] mb-4">Fall 2025 Teaching</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>CSCE 703 / CYBR 603 / MARA 655:</strong> Cybersecurity Risk<br><em>Prerequisite:</em> G7/G8 Classification, A curious mind</li>
+            <li><strong>CSCE 477 / CYBR 403:</strong> Cybersecurity Risk<br><em>Prerequisite:</em> A curious mind</li>
+            <li><strong>CSCE 689:</strong> Special Topics: Security Engineering<br><em>Prerequisite:</em> G7/G8 Classification, UG Engineering Honors</li>
+            <li><strong>CSCE 482:</strong> Senior Capstone Design<br><em>Prerequisite:</em> Grade of C or better in CSCE 411, and CSCE 315 or CSCE 331; senior classification</li>
+            <li><strong>CSCE 691:</strong> Graduate Research</li>
+            <li><strong>CSCE 685:</strong> Directed Studies</li>
+            <li><strong>CSCE 491:</strong> Undergraduate Research</li>
+            <li><strong>CSCE 491 / 291:</strong> Undergraduate Directed Studies</li>
+          </ul>
+        </div>
+
+        <!-- Spring 2025 -->
+        <div class="mb-10">
+          <h3 class="text-2xl font-semibold text-[#500000] mb-4">Spring 2025 Teaching</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>CSCE 703 / CYBR 603 / MARA 655:</strong> Cybersecurity Risk<br><em>Prerequisite:</em> Grad classification or my permission</li>
+            <li><strong>CSCE 477 / CYBR 403:</strong> Cybersecurity Risk<br><em>Prerequisite:</em> Grade of C or better in CYBR 201/CSCE 201 or CSCE 221; junior or senior classification</li>
+            <li><strong>CSCE 482:</strong> Senior Capstone Design (Section 934)<br><em>Prerequisite:</em> Grade of C or better in CSCE 411, and CSCE 315 or CSCE 331; senior classification</li>
+            <li><strong>CSCE 120:</strong> Program Design and Concepts (Sections 516 to 519)<br><em>Prerequisite:</em> Grade of C or better in ENGR 102, CSCE 110, CSCE 111, CSCE 206, or PHYS 150</li>
+            <li><strong>CSCE 485:</strong> Directed Studies</li>
+            <li><strong>ITDE 685:</strong> Directed Studies</li>
+          </ul>
+        </div>
+
+        <!-- Fall 2024 -->
+        <div>
+          <h3 class="text-2xl font-semibold text-[#500000] mb-4">Fall 2024 Teaching</h3>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>ENGR 689-303:</strong> Applied Blockchain for Engineers<br>
+              <em>Prerequisite:</em> G7/G8 Classification or Undergrads via Instructor Approval<br>
+              <em>For registration, CRN# 59797</em></li>
+            <li><strong>CSCE 120:</strong> Program Design and Concepts (Sections 508–515)<br><em>Prerequisite:</em> Grade of C or better in ENGR 102, CSCE 110, CSCE 111, CSCE 206, or PHYS 150</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Leadership and Service -->
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Leadership and Service</h2>
+        
+        <p class="font-semibold text-[#500000] mt-2">Academic and Professional (at Texas A&M)</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4">
+          <li>2025–2027: Member, Data Governance Committee, University-wide ITG Program</li>
+          <li>2024–present: Member, Master’s Admissions and Recruiting Committee, Dept. of CSE</li>
+          <li>2025–present: Elected Member, Promotions and Tenure Committee, Dept. of CSE</li>
+          <li>2025–present: Faculty Advisor, FATE (Freshman Aspiring Towards Excellence)</li>
+          <li>2024–2025: School of Computing Planning Committee, College of Engineering</li>
+          <li>2020–2024: Member, External Advisory Board, Dept. of CSE</li>
+        </ul>
+
+        <p class="font-semibold text-[#500000]">Academic and Professional (National and International)</p>
+        <ul class="list-disc list-inside text-gray-600 mb-4">
+          <li>2024–2027: Member, USNC-TAG for IEC/ISO JTC on Quantum Technologies</li>
+          <li>2024–present: Advisor, TIDES, IIT Roorkee</li>
+          <li>2024–present: Member, FBI Infragard</li>
+          <li>2023–2024: Mentor and Leadership Coach, US National Cyber Team</li>
+          <li>2024–2025: Visiting Professor of Cybersecurity, IIT Roorkee</li>
+          <li>2025: Program Committee, ECCWS 2025, Kaiserslautern, Germany</li>
+          <li>2025: Program Committee, dg.o 2025, Porto Alegre, Brazil</li>
+          <li>2025: Member, Privacy Committee, U.S. Department of Homeland Security</li>
+        </ul>
+
+        <p class="font-semibold text-[#500000]">Community</p>
+        <ul class="list-disc list-inside text-gray-600">
+          <li>2024–2026: Executive Committee, IIT Roorkee Alumni Association</li>
+          <li>2024–present: Member, Rotary Club of College Station</li>
+          <li>2022–present: Board of Directors, ACT for Mental Health, San Jose</li>
+          <li>2022–2024: Mentor, Women in Cybersecurity (WiCyS)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="py-16">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
       <div class="bg-white shadow-md rounded-2xl p-6 border">
         <h3 class="text-xl font-semibold text-[#500000] mb-2">Our Mission</h3>
-        <p>To [insert lab mission] through rigorous experimentation and collaborative teamwork.</p>
+        <p>To promote cybersecurity and safety in a rapidly evolving world through state-of-the-art research and industry leading projects.</p>
       </div>
       <div class="bg-white shadow-md rounded-2xl p-6 border">
         <h3 class="text-xl font-semibold text-[#500000] mb-2">Published Work</h3>
-        <p>Explore our peer-reviewed publications across [relevant disciplines].</p>
+        <p>Explore our peer-reviewed publications across AI and Cybersecurity, Cyber Warfare, Small Business Security, Cyber Liability Insurance, Blockchains Security.</p>
       </div>
       <div class="bg-white shadow-md rounded-2xl p-6 border">
         <h3 class="text-xl font-semibold text-[#500000] mb-2">Join Us</h3>
@@ -48,7 +152,12 @@
 
   <footer class="bg-[#500000] text-white py-6">
     <div class="max-w-6xl mx-auto px-4 text-center">
-      <p>&copy; 2025 Lab Group Name | Department | University Name</p>
+      <p>
+        &copy; 2025 
+        <a href="https://shreyas.engr.tamu.edu/aggies/" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">AGGIES Lab</a> |
+        <a href="https://engineering.tamu.edu/" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">College of Engineering</a> |
+        <a href="https://www.tamu.edu/index.html" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Texas A&M University</a>
+      </p>
     </div>
   </footer>
 </body>
