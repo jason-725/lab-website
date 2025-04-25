@@ -39,34 +39,54 @@
     <div class="mb-8 flex gap-4 flex-wrap">
       <button onclick="filterTeam('all')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">All</button>
       <button onclick="filterTeam('pi')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">Faculty</button>
-      <button onclick="filterTeam('phd')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">PhD Students</button>
+      <button onclick="filterTeam('grad')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">Grad Students</button>
       <button onclick="filterTeam('undergrad')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">Undergraduates</button>
+      <button onclick="filterTeam('affiliates')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">Affiliates</button>
+      <button onclick="filterTeam('future')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">Future Aggies</button>
+
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <!-- Team Member Card -->
+      <!-- Professor Example -->
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="pi">
-        <img src="assets/member1.jpg" alt="Dr. Jane Doe" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-        <h3 class="text-xl font-semibold">Dr. Jane Doe</h3>
-        <p class="text-[#500000]">Principal Investigator</p>
-        <button onclick="toggleBio('bio-jane')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
-        <p id="bio-jane" class="text-gray-600 text-sm mt-2 hidden">Dr. Doe leads the lab’s research efforts in [specialization] and mentors both undergraduate and graduate students.</p>
+        <img src="./assets/prof.jpg" alt="Prof. Shreyas Kumar" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold">Prof. Shreyas Kumar</h3>
+        <p class="text-[#500000]">Professor</p>
+        <button onclick="toggleDetails('bio-kumar')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
+        <p id="bio-kumar" class="text-gray-600 text-sm mt-2 hidden">[placeholder bio]</p>
       </div>
-
-      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="phd">
-        <img src="assets/member2.jpg" alt="John Smith" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-        <h3 class="text-xl font-semibold">John Smith</h3>
-        <p class="text-[#500000]">PhD Student</p>
-        <button onclick="toggleBio('bio-john')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
-        <p id="bio-john" class="text-gray-600 text-sm mt-2 hidden">John's research focuses on [topic]. He is currently developing tools to improve [application].</p>
+      <!-- Graduate Student Example -->
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
+        <img src="assets/member2.jpg" alt="Maitreya Niranjan" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold">Maitreya Niranjan</h3>
+        <p class="text-[#500000]">Graduate Student</p>
+        <button onclick="toggleDetails('bio-niranjan')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
+        <p id="bio-niranjan" class="text-gray-600 text-sm mt-2 hidden">[placeholder bio]</p>
       </div>
-
+      <!-- Undergraduate Student Example -->
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
-        <img src="assets/member3.jpg" alt="Sarah Lee" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-        <h3 class="text-xl font-semibold">Sarah Lee</h3>
+        <img src="assets/member3.jpg" alt="Vincent Nguyen" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold">Vincent Nguyen</h3>
         <p class="text-[#500000]">Undergraduate Researcher</p>
-        <button onclick="toggleBio('bio-sarah')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
-        <p id="bio-sarah" class="text-gray-600 text-sm mt-2 hidden">Sarah assists with lab experiments and data analysis in support of the ongoing [project name] project.</p>
+        <button onclick="toggleDetails('bio-nguyen')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
+        <p id="bio-nguyen" class="text-gray-600 text-sm mt-2 hidden">[Placeholder]</p>
+      </div>
+      <!-- Affiliates Example -->
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/member3.jpg" alt="Sateesh Peddoju" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold">Sateesh Peddoju</h3>
+        <p class="text-[#500000]">Affiliate</p>
+        <button onclick="toggleDetails('bio-Peddoju')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
+        <p id="bio-Peddoju" class="text-gray-600 text-sm mt-2 hidden">[Placeholder]</p>
+      </div>
+    <!-- Future Aggies Example -->
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="future">
+        <img src="assets/member3.jpg" alt="Anusha Nigam" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+        <h3 class="text-xl font-semibold">Anusha Nigam</h3>
+        <p class="text-[#500000]">Future Aggie</p>
+        <button onclick="toggleDetails('bio-Nigam')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
+        <p id="bio-Nigam" class="text-gray-600 text-sm mt-2 hidden">[Placeholder]</p>
       </div>
     </div>
   </main>
