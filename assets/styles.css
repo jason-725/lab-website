@@ -67,3 +67,7 @@ body {
   cursor: pointer;
 }
 
+.selected-filter {
+  background-color: #6a1a1a !important;
+  font-weight: bold;
+}
