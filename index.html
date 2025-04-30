@@ -6,6 +6,15 @@
   <title>AGGIES Lab | Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- Inline keyframes via <style> (required for animation) -->
+  <style>
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-800px); }
+  }
+  </style>
+
 </head>
 <body class="bg-white text-gray-900">
   <header class="navbar">
@@ -29,10 +38,29 @@
 
   <section class="bg-[#f2f2f2] py-20">
     <div class="max-w-4xl mx-auto text-center px-6">
-      <h2 class="text-4xl font-bold mb-4 text-[#500000]">Advancing Science Through Research</h2>
+      <h2 class="text-4xl font-bold mb-4 text-[#500000]">AI For Government, Grid, Infrastructure, and Engineering Security</h2>
       <p class="text-lg text-gray-700">Dedicated to exploring cutting-edge research in cybersecurity and AI</p>
     </div>
   </section>
+
+  <div style="width:auto; height:200px; overflow:hidden; position:relative;">
+    <div style="
+        display:flex;
+        width:3000px;
+        animation:slide 20s linear infinite;
+      ">
+      <img src="./lab-photos/lab1.jpg" style="width:300px; height:200px; object-fit:cover;">
+      <img src="./lab-photos/lab2.jpg" style="width:300px; height:200px; object-fit:cover;">
+      <img src="./lab-photos/lab3.jpg" style="width:300px; height:200px; object-fit:cover;">
+      <img src="./lab-photos/lab4.jpg" style="width:300px; height:200px; object-fit:cover;">
+      <img src="./lab-photos/srw1.jpg" style="width:300px; height:200px; object-fit:cover;">
+      <img src="./lab-photos/srw2.jpg" style="width:300px; height:200px; object-fit:cover;">
+      <img src="./lab-photos/srw3.jpg" style="width:300px; height:200px; object-fit:cover;">
+      <img src="./lab-photos/srw4.jpg" style="width:300px; height:200px; object-fit:cover;">
+      <img src="./lab-photos/csce-expo1.jpg" style="width:300px; height:200px; object-fit:cover;">
+      <img src="./lab-photos/achievement.jpg" style="width:300px; height:200px; object-fit:cover;">
+    </div>
+  </div>
 
   <section class="bg-gray-50 py-16">
     <div class="max-w-6xl mx-auto px-6">
