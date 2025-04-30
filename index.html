@@ -36,7 +36,8 @@
     </div>
   </header>
 
-  <section class="bg-[#f2f2f2] py-20">
+  <!-- Title Section -->
+  <section class="bg-white py-16">
     <div class="max-w-4xl mx-auto text-center px-6">
       <h2 class="text-4xl font-bold mb-4 text-[#500000]">AI For Government, Grid, Infrastructure, and Engineering Security</h2>
       <p class="text-lg text-gray-700">Dedicated to exploring cutting-edge research in cybersecurity and AI</p>
@@ -62,26 +63,19 @@
     </div>
   </div>
 
-  <section class="bg-gray-50 py-16">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Faculty</h2>
-      
-      <!-- Flex container for name and image -->
-      <div class="flex flex-col md:flex-row items-start gap-6 mb-12">
-        <!-- Text Info -->
-        <div class="flex-1 space-y-2">
-          <h3 class="text-2xl font-semibold text-[#500000]">Shreyas Kumar</h3>
-          <h4 class="text-xl font-semibold text-[#500000]">Professor of Practice</h4>
-          <p class="text-gray-700">Department of Computer Science and Engineering</p>
-          <p class="text-gray-700">Department of Multidisciplinary Engineering (Joint Courtesy Faculty Appointment)</p>
-        </div>
-
-        <!-- Image -->
-        <div class="flex-shrink-0">
-          <img src="assets/prof.jpg" alt="Professor Kumar" class="w-[200px] h-[300px] object-cover rounded-lg shadow-md">
-        </div>
+  <!-- Featured Posters Section -->
+  <section class="bg-[#f2f2f2] py-20">
+  <div class="max-w-4xl mx-auto text-center px-6">
+    <h2 class="text-3xl font-bold text-[#500000] mb-8">Featured Student Research Week Posters</h2>
+    <div class="flex justify-center items-center bg-white h-[600px] rounded-xl shadow-lg">
+      <img id="poster-slideshow" src="assets/Poster4.png"
+           class="max-h-[500px] w-auto object-contain transition-opacity duration-1000 opacity-100" />
       </div>
+    </div>
+  </section>
 
+  <!-- Vistion/Mission Section -->
+  <section class="bg-white py-16">
       <!-- Vision Section -->
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Our Vision</h2>
@@ -93,9 +87,27 @@
         <p class="text-lg text-gray-700 mb-4">At the AI for Government, Grid, Infrastructure & Engineering Security (AGGIES Lab), our mission is to help establish Texas A&M University and the Great State of Texas as national leaders in AI-driven security across government, critical infrastructure, and engineered systems.</p>
         <p class="text-lg text-gray-700 mb-4">We advance national resilience and global innovation by developing pioneering AI solutions at the intersection of cybersecurity, operational technology, and information technology. Through interdisciplinary research, real-world collaboration, and a commitment to discovery and leadership, we empower AGGIES Lab members to drive transformational change, protect vital systems, and serve the public good.</p>
       </div>
+
+      <!-- Faculty Section -->
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Faculty</h2>
+      
+      <div class="flex flex-col md:flex-row items-start gap-6 mb-12">
+        <div class="flex-1 space-y-2">
+          <h3 class="text-2xl font-semibold text-[#500000]">Shreyas Kumar</h3>
+          <h4 class="text-xl font-semibold text-[#500000]">Professor of Practice</h4>
+          <p class="text-gray-700">Department of Computer Science and Engineering</p>
+          <p class="text-gray-700">Department of Multidisciplinary Engineering (Joint Courtesy Faculty Appointment)</p>
+        </div>
+        <div class="flex-shrink-0">
+          <img src="assets/prof.jpg" alt="Professor Kumar" class="w-[200px] h-[300px] object-cover rounded-lg shadow-md">
+        </div>
+      </div>
+
     </section>
 
-  <section class="py-16">
+    <!-- Footer Cards Section -->
+    <section class="bg-[#f2f2f2] py-20">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
       <div class="bg-white shadow-md rounded-2xl p-6 border">
         <!-- can be removed? -->
@@ -113,6 +125,7 @@
     </div>
   </section>
 
+  <!-- Fading image carosuel -->
   <footer class="bg-[#500000] text-white py-6">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <p>
@@ -124,5 +137,25 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    const imagePaths = Array.from({ length: 11 }, (_, i) => `assets/Poster${i + 4}.png`);
+    const imgElement = document.getElementById("poster-slideshow");
+    let current = 0;
+  
+    setInterval(() => {
+      imgElement.classList.remove("opacity-100");
+      imgElement.classList.add("opacity-0");
+  
+      setTimeout(() => {
+        current = (current + 1) % imagePaths.length;
+        imgElement.src = imagePaths[current];
+        imgElement.classList.remove("opacity-0");
+        imgElement.classList.add("opacity-100");
+      }, 1000);
+    }, 4000);
+  </script>
+  
+
 </body>
 </html>
