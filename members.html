@@ -8,10 +8,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/styles.css">
   <script>
-    function toggleDetails(id) {
-      const section = document.getElementById(id);
-      section.classList.toggle('hidden');
-    }
+    function filterTeam(role) {
+       const cards = document.querySelectorAll('[data-role]');
+       cards.forEach(card => {
+         if (role === 'all' || card.dataset.role === role) {
+           card.style.display = 'block';
+         } else {
+           card.style.display = 'none';
+         }
+       });
+     }
+     function toggleBio(id) {
+       const bio = document.getElementById(id);
+       bio.classList.toggle('hidden');
+     }
   </script>
 </head>
 <body class="bg-white text-gray-900">
@@ -22,63 +32,421 @@
         <span>AGGIES Lab</span>
       </div>
       <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html">Home</a>
         <a href="members.html">Members</a>
         <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="collaborations.html">Collaboration</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="resources.html">Other Resources</a>
+        <a href="resources.html" class="active">Other Resources</a>
       </nav>
     </div>
   </header>
 
   <main class="max-w-6xl mx-auto py-12 px-4">
     <h2 class="text-4xl font-bold text-[#500000] mb-8">Our Team</h2>
-    <p class="text-lg text-gray-700 mb-6">We are a multidisciplinary group of scientists, engineers, and students working together to advance knowledge in our field. Meet the people behind the research:</p>
+    <p class="text-lg text-gray-700 mb-6">We are a multidisciplinary group of researchers that include National Merit Scholars, University Honors, Engineering Honors, Brown Scholars, and more. Meet the people behind the research:</p>
 
     <div class="mb-8 flex gap-4 flex-wrap">
-      <button onclick="filterTeam('all')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">All</button>
-      <button onclick="filterTeam('pi')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">Faculty</button>
-      <button onclick="filterTeam('phd')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">PhD Students</button>
-      <button onclick="filterTeam('undergrad')" class="bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">Undergraduates</button>
+      <button id="btn-all" onclick="filterTeam('all')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
+        All <span id="count-all" class="ml-1 text-sm font-normal"></span>
+      </button>
+      <button id="btn-pi" onclick="filterTeam('pi')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
+        Faculty <span id="count-pi" class="ml-1 text-sm font-normal"></span>
+      </button>
+      <button id="btn-grad" onclick="filterTeam('grad')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
+        Grad Students <span id="count-grad" class="ml-1 text-sm font-normal"></span>
+      </button>
+      <button id="btn-undergrad" onclick="filterTeam('undergrad')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
+        Undergraduates <span id="count-undergrad" class="ml-1 text-sm font-normal"></span>
+      </button>
+      <button id="btn-affiliates" onclick="filterTeam('affiliates')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
+        Affiliates <span id="count-affiliates" class="ml-1 text-sm font-normal"></span>
+      </button>
+      <button id="btn-future" onclick="filterTeam('future')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
+        Future Aggies <span id="count-future" class="ml-1 text-sm font-normal"></span>
+      </button>
     </div>
+    
+    
 
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-      <!-- Team Member Card -->
+
+      <!-- Professor -->
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="pi">
-        <img src="assets/member1.jpg" alt="Dr. Jane Doe" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-        <h3 class="text-xl font-semibold">Dr. Jane Doe</h3>
-        <p class="text-[#500000]">Principal Investigator</p>
-        <button onclick="toggleBio('bio-jane')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
-        <p id="bio-jane" class="text-gray-600 text-sm mt-2 hidden">Dr. Doe leads the lab’s research efforts in [specialization] and mentors both undergraduate and graduate students.</p>
+        <img src="./assets/Prof-Kumar-300x260.webp" alt="Prof. Shreyas Kumar" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Shreyas Kumar</h3>
+        <p class="text-[#500000]">Professor</p>
       </div>
 
-      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="phd">
-        <img src="assets/member2.jpg" alt="John Smith" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-        <h3 class="text-xl font-semibold">John Smith</h3>
-        <p class="text-[#500000]">PhD Student</p>
-        <button onclick="toggleBio('bio-john')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
-        <p id="bio-john" class="text-gray-600 text-sm mt-2 hidden">John's research focuses on [topic]. He is currently developing tools to improve [application].</p>
+
+      <!-- Graduate Student -->
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
+        <img src="assets/MN-copy-285x300.webp" alt="Maitreya Niranjan" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Maitreya Niranjan</h3>
+        <p class="text-[#500000]">Graduate Student</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
+        <img src="assets/Garg-300x275.webp" alt="Anika Garg" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Anika Garg</h3>
+        <p class="text-[#500000]">Graduate Student</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
+        <img src="assets/ArielaMitrani.jpeg" alt="Ariela Mitrani" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Ariela Mitrani</h3>
+        <p class="text-[#500000]">Graduate Student</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
+        <img src="assets/rishabh-297x300.webp" alt="Rishabh Pagaria" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Rishabh Pagaria</h3>
+        <p class="text-[#500000]">Graduate Student</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
+        <img src="assets/WillemG.jpg" alt="Willem Glenewinkel" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Willem Glenewinkel</h3>
+        <p class="text-[#500000]">Graduate Student</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
+        <img src="assets/Dongha.jpg" alt="Dongha Cho" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Dongha Cho</h3>
+        <p class="text-[#500000]">Graduate Student</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
+        <img src="assets/Audrey-288x300.webp" alt="Audrey Estrada" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Audrey Estrada</h3>
+        <p class="text-[#500000]">Graduate Student</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
+        <img src="assets/person_icon.jpg" alt="Jedidiah Samrajkumar" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Jedidiah Samrajkumar</h3>
+        <p class="text-[#500000]">Graduate Student</p>
+      </div>
+
+      <!-- Undergraduate Students -->
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/vince-296x300.webp" alt="Vincent Nguyen" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Vincent Nguyen</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
-        <img src="assets/member3.jpg" alt="Sarah Lee" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
-        <h3 class="text-xl font-semibold">Sarah Lee</h3>
+        <img src="assets/Anisha-300x290.webp" alt="Anisha Menezes" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Anisha Menezes</h3>
         <p class="text-[#500000]">Undergraduate Researcher</p>
-        <button onclick="toggleBio('bio-sarah')" class="mt-2 text-sm text-[#500000] underline">Toggle Bio</button>
-        <p id="bio-sarah" class="text-gray-600 text-sm mt-2 hidden">Sarah assists with lab experiments and data analysis in support of the ongoing [project name] project.</p>
       </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Giri-249x300.webp" alt="Sarthak Giri" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Sarthak Giri</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Gauri-300x294.webp" alt="Gauri Agrawal" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Gauri Agrawal</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Nishika-300x288.webp" alt="Nishika Bajaj" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Nishika Bajaj</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/serhii-280x300.webp" alt="Serhii Honcharenko" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Serhii Honcharenko</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/spahiu-283x300.webp" alt="Armend Spahiu" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Armend Spahiu</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Saravanan-300x300.jpeg" alt="Seshadithya Saravanan" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Seshadithya Saravanan</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Shrutwik.jpeg" alt="Shrutwik Muppa" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Shrutwik Muppa</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Alek.jpg" alt="Aleksander Alvarez" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Aleksander Alvarez</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Nicholas.jpg" alt="Nicholas Witkowski" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Nicholas Witkowski</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Jason-300x266.webp" alt="Jason Xiong" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Jason Xiong</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Shruti-150x150.webp" alt="Shruti Oruganti" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Shruti Oruganti</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/IshaVirk.webp" alt="Isha Virk" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Isha Virk</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Farley-e1739592997279-150x150.jpg" alt="Cameron Farley" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Cameron Farley</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/JashanjodhBajwa.jpg" alt="Jashanjodh Bajwa" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Jashanjodh Bajwa</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Andre.jpg" alt="Andre Mordi" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Andre Mordi</h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/JackLao.webp" alt="Jack Lao" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Jack Lao </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Ujval.jpeg" alt="Ujval Munagala" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Ujval Munagala </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/HiyaSharma.jpeg" alt="Hiya Sharma" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Hiya Sharma </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Joseph-257x300.webp" alt="Joseph Botros" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Joseph Botros </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Saptarshi.jpg" alt="Saptarshi Das" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Saptarshi Das </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Arush.jpeg" alt="Arush Jha" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Arush Jha </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/jace-298x300.webp" alt="Jace Moy" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Jace Moy </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/bae-292x300.webp" alt="Andrew Bae" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Andrew Bae </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/avaneesh-e1744335595154-300x300.webp" alt="Avaneesh Giri" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Avaneesh Giri </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Namish.jpeg" alt="Namish Dixit" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Namish Dixit </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Apoorva-254x300.webp" alt="Apoorv Agrawal" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Apoorv Agrawal </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
+        <img src="assets/Devkumar.webp" alt="Devkumar Banerjee" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Devkumar Banerjee </h3>
+        <p class="text-[#500000]">Undergraduate Researcher</p>
+      </div>
+
+      <!-- Affiliates -->
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/SKP-150x150.jpg" alt="Sateesh Peddoju" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Sateesh Peddoju</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/priyansha_19062023114538-e1740632613425-294x300.webp" alt="Priyansha Kaurav" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Priyansha Kaurav</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/Gourav.jpeg" alt="Gourav Nagar" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Gourav Nagar</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/Nakul-e1740639769204-282x300.webp" alt="Nakul Singh" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Nakul Singh</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/Ananya.webp" alt="Ananya Agarwal" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Ananya Agarwal</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/adya-300x273.webp" alt="Adya Daruka" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Adya Daruka</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/Sanskriti.webp" alt="Sanskriti Singh" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Sanskriti Singh</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/Sukrit.jpg" alt="Sukrit Jindal" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Sukrit Jindal</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/Diya-300x294.webp" alt="Diya Bhatnagar" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Diya Bhatnagar</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/kaartik-300x293.webp" alt="Kaartik Tejwani" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Kaartik Tejwani</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/Vidhika-300x264.webp" alt="Vidhika Tiwari" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Vidhika Tiwari</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="affiliates">
+        <img src="assets/dev-293x300.webp" alt="Dev Saini" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Dev Saini</h3>
+        <p class="text-[#500000]">Affiliate</p>
+      </div>
+
+    <!-- Future Aggies -->
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="future">
+        <img src="assets/Anusha.jpeg" alt="Anusha Nigam" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Anusha Nigam</h3>
+        <p class="text-[#500000]">Future Aggie</p>
+      </div>
+
+      <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="future">
+        <img src="assets/Reyaansh.jpeg" alt="Reyaansh Gadia" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Reyaansh Gadia</h3>
+        <p class="text-[#500000]">Future Aggie</p>
+      </div>
+
     </div>
   </main>
   <footer class="bg-[#500000] text-white py-6">
     <div class="max-w-6xl mx-auto px-4 text-center">
-        <p>
+      <p>
         &copy; 2025 
         <a href="https://shreyas.engr.tamu.edu/aggies/" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">AGGIES Lab</a> |
+        <a href="https://engineering.tamu.edu/cse/index.html" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Department of Computer Science</a> |
         <a href="https://engineering.tamu.edu/" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">College of Engineering</a> |
         <a href="https://www.tamu.edu/index.html" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Texas A&M University</a>
-        </p>
+      </p>
     </div>
     </footer>
+
+    <script>
+      function filterTeam(role) {
+        const cards = document.querySelectorAll('[data-role]');
+        const buttons = document.querySelectorAll('.filter-btn');
+    
+        // Show/hide cards
+        cards.forEach(card => {
+          card.style.display = (role === 'all' || card.dataset.role === role) ? 'block' : 'none';
+        });
+    
+        // Update active button styles
+        buttons.forEach(btn => {
+          btn.classList.remove('selected-filter');
+          btn.classList.remove('font-bold');
+          btn.classList.add('font-normal');
+        });
+    
+        const activeBtn = document.getElementById(`btn-${role}`);
+        activeBtn.classList.add('selected-filter');
+        activeBtn.classList.remove('font-normal');
+        activeBtn.classList.add('font-bold');
+      }
+    
+      // Count members on load
+      window.onload = () => {
+        const roles = ['pi', 'grad', 'undergrad', 'affiliates', 'future'];
+        let total = 0;
+    
+        roles.forEach(role => {
+          const count = document.querySelectorAll(`[data-role="${role}"]`).length;
+          document.getElementById(`count-${role}`).textContent = `(${count})`;
+          total += count;
+        });
+    
+        document.getElementById('count-all').textContent = `(${total})`;
+    
+        // Highlight default (All)
+        filterTeam('all');
+      };
+    </script>
+    
+    
 </body>
 </html>
