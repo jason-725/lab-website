@@ -1,4 +1,3 @@
-<!-- research.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +6,6 @@
   <title>AGGIES Lab | Research</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/styles.css">
-  <script>
-    function toggleDetails(id) {
-      const section = document.getElementById(id);
-      section.classList.toggle('hidden');
-    }
-  </script>
 </head>
 <body class="bg-white text-gray-900">
   <header class="navbar">
@@ -29,7 +22,7 @@
         <a href="collaborations.html">Collaboration</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="resources.html" >Other Resources</a>
+        <a href="resources.html">Other Resources</a>
       </nav>
     </div>
   </header>
@@ -37,40 +30,35 @@
   <!-- Main Content -->
   <main class="max-w-6xl mx-auto py-12 px-4">
     <h2 class="text-4xl font-bold text-maroon mb-8">Research Highlights</h2>
-    <p class="text-lg text-gray-800 mb-10">Our lab tackles a variety of projects ranging from fundamental science to applied technology. Here are a few of our featured works:</p>
+    <p class="text-lg text-gray-800 mb-10">Our lab tackles a variety of projects ranging from fundamental science to applied technology. Here are the posters of some of our featured works:</p>
 
-    <div class="space-y-8">
-      <!-- Project Card 1 -->
-      <div class="research-card">
-        <h3 class="card-title">Project Atlas: Mapping Neural Interfaces</h3>
-        <p>An interdisciplinary effort to design and test high-fidelity brain-machine interface systems for medical applications.</p>
-        <button onclick="toggleDetails('details-atlas')" class="card-button">Show More</button>
-        <div id="details-atlas" class="hidden mt-3 text-gray-700 text-sm">
-          This project investigates long-term biocompatibility, signal fidelity, and software decoding mechanisms in real-time control scenarios. Our team collaborates with neurologists and bioengineers.
-        </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <!-- Poster 1 -->
+      <div class="poster-item">
+        <img src="assets/Poster4.png" alt="Poster 1" class="h-[400px] w-full object-cover shadow-md hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mt-3">Humanizing Cyber War</h3>
       </div>
 
-      <!-- Project Card 2 -->
-      <div class="research-card">
-        <h3 class="card-title">Smart Materials for Environmental Sensing</h3>
-        <p>Developing polymer-based systems that change properties in response to pollutants and stressors.</p>
-        <button onclick="toggleDetails('details-materials')" class="card-button">Show More</button>
-        <div id="details-materials" class="hidden mt-3 text-gray-700 text-sm">
-          These sensors aim to provide affordable, distributed environmental monitoring in areas with limited access to conventional equipment. In collaboration with chemical engineering and sustainability teams.
-        </div>
+      <!-- Poster 2 -->
+      <div class="poster-item">
+        <img src="assets/Poster 5.png" alt="Poster 2" class="h-[400px] w-full object-cover shadow-md hover:shadow-lg transition">
+        <h3 class="text-lg font-semibold mt-3">PRISM</h3>
       </div>
 
-      <!-- Project Card 3 -->
-      <div class="research-card">
-        <h3 class="card-title">AI-Augmented Diagnostics</h3>
-        <p>Integrating deep learning algorithms into clinical workflows to support early disease detection.</p>
-        <button onclick="toggleDetails('details-ai')" class="card-button">Show More</button>
-        <div id="details-ai" class="hidden mt-3 text-gray-700 text-sm">
-          This research explores model interpretability, ethical data sourcing, and system validation in medical settings. Joint effort with local hospitals and health informatics programs.
-        </div>
+      <!-- Poster 3 -->
+      <div class="poster-item">
+        <img src="assets/Poster6.png" alt="Poster 3" class="h-[400px] w-full object-cover shadow-md hover:shadow-lg transition">        
+        <h3 class="text-lg font-semibold mt-3">Cybersecurity Bridges The Gap</h3>
+      </div>
+
+      <!-- Poster 4 -->
+      <div class="poster-item">
+        <img src="assets/Poster7.png" alt="Poster 4" class="h-[400px] w-full object-cover shadow-md hover:shadow-lg transition">        
+        <h3 class="text-lg font-semibold mt-3">Enchancing Malware Detection</h3>
       </div>
     </div>
   </main>
+
   <footer class="bg-[#500000] text-white py-6">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <p>
@@ -81,6 +69,6 @@
         <a href="https://www.tamu.edu/index.html" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Texas A&M University</a>
       </p>
     </div>
-    </footer>
+  </footer>
 </body>
 </html>
