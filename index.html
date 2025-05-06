@@ -7,123 +7,181 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/styles.css">
 
-  <!-- Inline keyframes via <style> (required for animation) -->
-  <style>
-  @keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-800px); }
-  }
-  </style>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
 
 </head>
 <body class="bg-white text-gray-900">
-  <header class="navbar">
-    <div class="container">
-      <div class="logo flex items-center space-x-2">
-        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto">
-        <span>AGGIES Lab</span>
+  <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
+    <div class="container mx-auto flex justify-between items-center h-full px-6">
+      <!-- Logo and Site Name -->
+      <div class="logo flex items-center space-x-2 text-white">
+        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded">
+        <span class="font-semibold text-lg">AGGIES Lab</span>
       </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-          <a href="members.html">Members</a>
-          <a href="collaborations.html">Collaborations</a>
-          <a href="board.html">Advisory Board</a>
-          <a href="research.html">Research</a>
-          <a href="publications.html">Publications</a>
-          <a href="events.html">Success Stories</a>
-          <a href="contact.html">Contact</a>
-          <a href="resources.html" >Cyber Resources</a>
+      <!-- Nav Bar Links -->
+      <nav class="nav-links flex space-x-1 h-full">
+        <a href="index.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Home</span>
+        </a>
+        <a href="members.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Members</span>
+        </a>
+        <a href="collaborations.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Collaborations</span>
+        </a>
+        <a href="board.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Advisory Board</span>
+        </a>
+        <a href="research.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Research</span>
+        </a>
+        <a href="publications.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Publications</span>
+        </a>
+        <a href="events.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Success Stories</span>
+        </a>
+        <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Contact</span>
+        </a>
+        <a href="resources.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Cyber Resources</span>
+        </a>
       </nav>
     </div>
   </header>
-
+  
   <!-- Title Section -->
-  <section class="bg-white py-16">
-    <div class="max-w-4xl mx-auto text-center px-6">
-      <div class="flex items-center justify-center space-x-4 mb-4">
-        <img src="assets/aggie-lab-logo_large2.png" alt="Lab Logo" class="h-56 w-auto">
-
-        <h2 class="text-4xl font-bold text-[#500000]">
-          AI For Government, Grid, Infrastructure, and Engineering Security (AGGIES Lab)
+  <section class="bg-white py-24 relative">
+    <div class="max-w-4xl mx-auto px-6 relative">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold text-[#500000] leading-relaxed"><br>
+          AI for Government, Grid, Infrastructure,<br>
+          and Engineering Security (AGGIES Lab)<br>
         </h2>
       </div>
-      
+      <div class="absolute -left-36 top-1/2 transform -translate-y-1/2"><br>
+        <img src="assets/aggie-lab-logo_large2.png" alt="Lab Logo" class="h-40 w-auto rounded-xl shadow">
+      </div>
+    </div>
   </section>
 
-  <div style="width:auto; height:200px; overflow:hidden; position:relative;">
-    <div style="
-        display:flex;
-        width:3000px;
-        animation:slide 20s linear infinite;
-      ">
-      <img src="./lab-photos/lab1.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/lab2.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/lab3.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/lab4.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/diwali.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/srw1.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/srw2.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/srw3.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/srw4.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/csce-expo1.jpg" style="width:300px; height:200px; object-fit:cover;">
-      <img src="./lab-photos/achievement.jpg" style="width:300px; height:200px; object-fit:cover;">
+  <!-- For carousel animation -->
+  <style>
+    @keyframes scroll-x {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+
+  <!-- Sliding Carousel, duplicated for the infinate looping, got rid of the jumps -->
+  <div class="overflow-hidden w-full h-[200px] relative">
+    <div class="flex w-max animate-[scroll-x_60s_linear_infinite]">
+      <div class="flex">
+        <img src="./lab-photos/lab1.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/lab2.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/lab3.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/lab4.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/diwali.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/srw1.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/srw2.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/srw3.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/srw4.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/csce-expo1.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/achievement.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/achievement2.jpg" class="w-[300px] h-[200px] object-cover" />
+      </div>
+      <div class="flex">
+        <img src="./lab-photos/lab1.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/lab2.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/lab3.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/lab4.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/diwali.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/srw1.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/srw2.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/srw3.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/srw4.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/csce-expo1.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/achievement.jpg" class="w-[300px] h-[200px] object-cover" />
+        <img src="./lab-photos/achievement2.jpg" class="w-[300px] h-[200px] object-cover" />
+      </div>
     </div>
   </div>
 
-  <!-- Featured SRW Posters Section -->
-  <section class="bg-[#f2f2f2] py-20">
+<!-- Featured SRW Posters Section -->
+<section class="bg-[#f2f2f2] py-20">
   <div class="max-w-4xl mx-auto text-center px-6">
     <h2 class="text-3xl font-bold text-[#500000] mb-8">Featured Research</h2>
-    <div class="flex justify-center items-center bg-white h-[600px] rounded-xl shadow-lg">
-      <img id="poster-slideshow" src="assets/Poster4.png"
-           class="max-h-[500px] w-auto object-contain transition-opacity duration-1000 opacity-100" />
-      </div>
+    <div class="relative group bg-white h-[600px] rounded-xl shadow-lg flex justify-center items-center overflow-hidden">
+      <!-- Two images for the overlapping fade effect -->
+      <img id="poster1"
+           src="assets/Poster4.png"
+           class="absolute transition-opacity duration-[1200ms] opacity-100 max-h-[500px] w-auto object-contain" />
+      <img id="poster2"
+           src="assets/Poster5.png"
+           class="absolute transition-opacity duration-[1200ms] opacity-0 max-h-[500px] w-auto object-contain" />
+      <!-- Left Arrow -->
+      <button onclick="prevSlide()"
+              class="absolute left-4 top-1/2 transform -translate-y-1/2 text-3xl text-[#500000] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        &#10094;
+      </button>
+      <!-- Right Arrow -->
+      <button onclick="nextSlide()"
+              class="absolute right-4 top-1/2 transform -translate-y-1/2 text-3xl text-[#500000] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        &#10095;
+      </button>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Vistion/Mission Section -->
   <section class="bg-white py-16">
       <!-- Vision Section -->
       <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Our Vision</h2>
-        <p class="text-lg text-gray-700 mb-4">To establish Texas A&M and the Great State of Texas as national leaders in AI-driven security for government, grid, and infrastructure systems, while inspiring our Lab members to shape the future of national resilience and global innovation.</p>
+        <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Empowering a Safer Tomorrow</h2>
+        <p class="text-lg text-gray-700 mb-4">AGGIES Lab, or AI for Government, Grid, Infrastructure, & Engineering Security, exists to promote cybersecurity and safety in a world of rapidly evolving AI technologies. Through state of the art research and industry leading projects, we focus on developing solutions that can transform digital security within fields such as computation and data sciences, social sciences, medical applications, and the humanities. At AGGIES, global challenges are met with technical and academic prowess to provide novel, high-impact results.</p>
       </div>
+      <br>
       <!-- Mission Section -->
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Our Mission</h2>
-        <p class="text-lg text-gray-700 mb-4">At the AI for Government, Grid, Infrastructure & Engineering Security (AGGIES Lab), our mission is to help establish Texas A&M University and the Great State of Texas as national leaders in AI-driven security across government, critical infrastructure, and engineered systems.</p>
-        <p class="text-lg text-gray-700 mb-4">We advance national resilience and global innovation by developing pioneering AI solutions at the intersection of cybersecurity, operational technology, and information technology. Through interdisciplinary research, real-world collaboration, and a commitment to discovery and leadership, we empower AGGIES Lab members to drive transformational change, protect vital systems, and serve the public good.</p>
+        <p class="text-lg text-gray-700 mb-4">Our mission is to help establish Texas A&M University and the Great State of Texas as national leaders in AI-driven security across government, critical infrastructure, and engineered systems.</p>
+        <p class="text-lg text-gray-700 mb-4">We strengthen national resilience and global innovation by developing pioneering AI solutions at the intersection of cybersecurity, operational technology, and information technology. Through interdisciplinary research, real-world collaboration, and a commitment to discovery and leadership, we empower AGGIES Lab members to drive transformational change, protect vital systems, and serve the public good.</p>
       </div>
 
       <!-- Faculty Section -->
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Faculty</h2>
-      
-      <div class="flex flex-col md:flex-row items-start gap-6 mb-12">
-        <div class="flex-1 space-y-2">
-          <h3 class="text-2xl font-semibold text-[#500000]">Shreyas Kumar</h3>
-          <h4 class="text-xl font-semibold text-[#500000]">Professor of Practice</h4>
-          <p class="text-gray-700">Department of Computer Science and Engineering</p>
-          <p class="text-gray-700">Department of Multidisciplinary Engineering (Joint Courtesy Faculty Appointment)</p>
-        </div>
-        <div class="flex-shrink-0">
-          <img src="assets/prof.jpg" alt="Professor Kumar" class="w-[200px] h-[300px] object-cover rounded-lg shadow-md">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-[#500000] mb-8 text-center">Faculty</h2>
+
+        <div class="flex flex-col md:flex-row items-start mb-12">
+          <div class="flex-1 space-y-2">
+            <h3 class="text-2xl font-semibold text-[#500000]">Shreyas Kumar</h3>
+            <h4 class="text-xl font-semibold text-[#500000]">Lab Director</h4>
+            <p class="text-gray-700">Department of Computer Science and Engineering</p>
+            <p class="text-gray-700">Department of Multidisciplinary Engineering (Joint Courtesy Faculty Appointment)</p>
+          </div>
+          <div class="flex-shrink-0 w-1/4">
+            <img src="assets/prof.jpg" alt="Professor Kumar" class="w-full rounded-lg">
+          </div>                        
         </div>
       </div>
-
     </section>
 
     <!-- Footer Cards Section -->
     <section class="bg-[#f2f2f2] py-20">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
       <div class="bg-white shadow-md rounded-2xl p-6 border">
-        <!-- can be removed? -->
-        <h3 class="text-xl font-semibold text-[#500000] mb-2">Our Mission</h3>
-        <p>To promote cybersecurity and safety in a rapidly evolving world through state-of-the-art research and industry leading projects.</p>
+        <h3 class="text-xl font-semibold text-[#500000] mb-2">Our Vision</h3>
+        <p>To strengthen cybersecurity and by harnessing the power of AI to build a safer tomorrow.</p>
       </div>
       <div class="bg-white shadow-md rounded-2xl p-6 border">
         <h3 class="text-xl font-semibold text-[#500000] mb-2">Published Work</h3>
-        <p>Explore our peer-reviewed publications across AI and Cybersecurity, Cyber Warfare, Small Business Security, Cyber Liability Insurance, Blockchains Security.</p>
+        <p>Explore our published research in various top international conferences covering areas such as cyber warfare, small business security, cyber liability insurance, and blockchain security.</p>
       </div>
       <div class="bg-white shadow-md rounded-2xl p-6 border">
         <h3 class="text-xl font-semibold text-[#500000] mb-2">Join Us</h3>
@@ -132,7 +190,6 @@
     </div>
   </section>
 
-  <!-- Fading image carosuel -->
   <footer class="bg-[#500000] text-white py-6">
     <div class="max-w-6xl mx-auto px-4 text-center">
       <p>
@@ -145,24 +202,81 @@
     </div>
   </footer>
 
+<!-- JavaScript for fading images and arrow navigation -->
+<script>
+  const imagePaths = Array.from({ length: 11 }, (_, i) => `assets/Poster${i + 4}.png`);
+  const img1 = document.getElementById("poster1");
+  const img2 = document.getElementById("poster2");
+  let current = 0;
+  let showingFirst = true;
+  let interval;
+  function crossfadeTo(index) {
+    const nextImage = imagePaths[index];
+    if (showingFirst) {
+      img2.src = nextImage;
+      img2.classList.remove("opacity-0");
+      img2.classList.add("opacity-100");
+      img1.classList.remove("opacity-100");
+      img1.classList.add("opacity-0");
+    } else {
+      img1.src = nextImage;
+      img1.classList.remove("opacity-0");
+      img1.classList.add("opacity-100");
+      img2.classList.remove("opacity-100");
+      img2.classList.add("opacity-0");
+    }
+    showingFirst = !showingFirst;
+  }
+  function nextSlide() {
+    current = (current + 1) % imagePaths.length;
+    crossfadeTo(current);
+    resetInterval();
+  }
+  function prevSlide() {
+    current = (current - 1 + imagePaths.length) % imagePaths.length;
+    crossfadeTo(current);
+    resetInterval();
+  }
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
+  }
+  interval = setInterval(() => {
+    nextSlide();
+  }, 5000);
+</script>
+  
+  <!-- JavaScript for Dynamic Nav Bar -->
   <script>
-    const imagePaths = Array.from({ length: 11 }, (_, i) => `assets/Poster${i + 4}.png`);
-    const imgElement = document.getElementById("poster-slideshow");
-    let current = 0;
-  
-    setInterval(() => {
-      imgElement.classList.remove("opacity-100");
-      imgElement.classList.add("opacity-0");
-  
-      setTimeout(() => {
-        current = (current + 1) % imagePaths.length;
-        imgElement.src = imagePaths[current];
-        imgElement.classList.remove("opacity-0");
-        imgElement.classList.add("opacity-100");
-      }, 1000);
-    }, 4000);
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      const label = link.querySelector(".nav-label");
+      if (href === currentPath) {
+        link.classList.add(
+          "bg-[#6a1a1a]",
+          "text-white",
+          "py-3",
+          "px-6",
+          "rounded-lg"
+        );
+        if (label) label.classList.add("font-bold");
+      } else {
+        link.classList.add("text-white", "hover:bg-[#6a1a1a]", "hover:rounded-lg");
+      }
+    });
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("shadow-lg");
+      } else {
+        navbar.classList.remove("shadow-lg");
+      }
+    });
   </script>
-  
 
 </body>
 </html>
