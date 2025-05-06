@@ -9,28 +9,48 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="bg-white text-gray-900">
-  <header class="navbar">
-    <div class="container">
-      <div class="logo flex items-center space-x-2">
-        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto">
-        <span>AGGIES Lab</span>
+  <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
+    <div class="container mx-auto flex justify-between items-center h-full px-6">
+      <!-- Logo and Site Name -->
+      <div class="logo flex items-center space-x-2 text-white">
+        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded">
+        <span class="font-semibold text-lg">AGGIES Lab</span>
       </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-          <a href="members.html">Members</a>
-          <a href="collaborations.html">Collaborations</a>
-          <a href="board.html">Advisory Board</a>
-          <a href="research.html">Research</a>
-          <a href="publications.html">Publications</a>
-          <a href="events.html">Success Stories</a>
-          <a href="contact.html">Contact</a>
-          <a href="resources.html" >Cyber Resources</a>
+      <!-- Navigation Links -->
+      <nav class="nav-links flex space-x-1 h-full">
+        <a href="index.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Home</span>
+        </a>
+        <a href="members.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Members</span>
+        </a>
+        <a href="collaborations.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Collaborations</span>
+        </a>
+        <a href="board.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Advisory Board</span>
+        </a>
+        <a href="research.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Research</span>
+        </a>
+        <a href="publications.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Publications</span>
+        </a>
+        <a href="events.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Success Stories</span>
+        </a>
+        <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Contact</span>
+        </a>
+        <a href="resources.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Cyber Resources</span>
+        </a>
       </nav>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto py-12 px-4">
-    <h2 class="text-4xl font-bold text-[#500000] mb-6">Contact the Lab</h2>
+    <h2 class="text-4xl font-bold text-[#500000] mb-6"><br><br>Contact the Lab</h2>
     <p class="text-lg text-gray-700 mb-8">Have a question or want to collaborate? Fill out the form below or reach out directly via email.</p>
 
     <form class="space-y-6 bg-[#f9f9f9] p-6 rounded-xl shadow-md">
@@ -97,5 +117,39 @@
       </p>
     </div>
     </footer>
+
+  <!-- JavaScript for Dynamic Nav Bar -->
+  <script>
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      const label = link.querySelector(".nav-label");
+
+      if (href === currentPath) {
+        link.classList.add(
+          "bg-[#6a1a1a]",
+          "text-white",
+          "py-3",
+          "px-6",
+          "rounded-lg"
+        );
+        if (label) label.classList.add("font-bold");
+      } else {
+        link.classList.add("text-white", "hover:bg-[#6a1a1a]", "hover:rounded-lg");
+      }
+    });
+
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("shadow-lg");
+      } else {
+        navbar.classList.remove("shadow-lg");
+      }
+    });
+  </script>
+
 </body>
 </html>
