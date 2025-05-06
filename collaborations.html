@@ -8,31 +8,51 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="bg-white text-gray-900">
-  <header class="navbar">
-    <div class="container">
-      <div class="logo flex items-center space-x-2">
-        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto">
-        <span>AGGIES Lab</span>
+  <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
+    <div class="container mx-auto flex justify-between items-center h-full px-6">
+      <!-- Logo and Site Name -->
+      <div class="logo flex items-center space-x-2 text-white">
+        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded">
+        <span class="font-semibold text-lg">AGGIES Lab</span>
       </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-          <a href="members.html">Members</a>
-          <a href="collaborations.html">Collaborations</a>
-          <a href="board.html">Advisory Board</a>
-          <a href="research.html">Research</a>
-          <a href="publications.html">Publications</a>
-          <a href="events.html">Success Stories</a>
-          <a href="contact.html">Contact</a>
-          <a href="resources.html" >Cyber Resources</a>
+      <!-- Navigation Links -->
+      <nav class="nav-links flex space-x-1 h-full">
+        <a href="index.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Home</span>
+        </a>
+        <a href="members.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Members</span>
+        </a>
+        <a href="collaborations.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Collaborations</span>
+        </a>
+        <a href="board.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Advisory Board</span>
+        </a>
+        <a href="research.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Research</span>
+        </a>
+        <a href="publications.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Publications</span>
+        </a>
+        <a href="events.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Success Stories</span>
+        </a>
+        <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Contact</span>
+        </a>
+        <a href="resources.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Cyber Resources</span>
+        </a>
       </nav>
     </div>
   </header>
 
   <section class="py-12 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">TAMU Collaborations</h2>
+      <h2 class="text-4xl font-bold text-center mb-12 text-[#500000]"><br><br>TAMU Collaborations</h2>
+    
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-  
         <div class="bg-white rounded-2xl shadow-md p-6 flex items-center space-x-6">
           <img src="assets/tamids.png" alt="TAMIDS Logo" class="w-20 h-20 object-contain">
           <p class="text-gray-800 text-base">
@@ -70,7 +90,7 @@
           </div>
           <p class="text-gray-800 text-base">
             <strong>Sharath Girimaji</strong>
-            <br>Department Head, Ocean Engineering<br>Professor, Aerospace Engineering
+            <br>Department Head, Ocean Engineering
           </p>
         </div>
 
@@ -79,9 +99,8 @@
             <img src="assets/khan_faisal.jpg" alt="Khan Faisal" class="w-full h-full object-cover object-[center_30%]">
           </div>
           <p class="text-gray-800 text-base">
-            <strong>Khan Faisal</strong>
+            <strong>Faisal Khan</strong>
             <br>Department Head, Chemical Engineering
-            <br>Professor, Chemical Engineering
           </p>
         </div>
 
@@ -141,20 +160,18 @@
           </div>
           <p class="text-gray-800 text-base">
             <strong>Nicole Kroll</strong>
-            <br>Psychiatric Mental Health Nurse Practitioner
+            <br>Associate Dean, Clinical Outreach and Affairs
           </p>
         </div>
-
       </div>
     </div>
   </section>
   
   <section class="py-16 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12 text-[#500000]">External Collaborations</h2>
+      <h2 class="text-4xl font-bold text-center mb-12 text-[#500000]">External Collaborations</h2>
   
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-  
         <!-- USSF -->
         <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center space-y-4">
           <img src="assets/USSF.png" alt="USSF Logo" class="w-20 h-20 object-contain">
@@ -213,15 +230,14 @@
     </div>
   </section>
   
-  
   <section class="py-16 bg-gray-50">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12 text-[#500000]">Our Sponsors</h2>
+      <h2 class="text-4xl font-bold text-center mb-12 text-[#500000]">Our Sponsors</h2>
   
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-center">
   
         <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center space-y-4">
-          <img src="assets/arive_logo.png" alt="ARIVE Logo" class="w-20 h-20 object-contain">
+          <img src="assets/arive_logo.png" alt="ARIVE Logo" class="w-36 h-36 object-contain">
           <p class="text-gray-800 text-base">
             <strong>ARIVE</strong><br>
             <a href="https://www.arive.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-800">Company Page</a>
@@ -229,7 +245,7 @@
         </div>
   
         <div class="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center space-y-4">
-          <img src="assets/GAVII.PNG" alt="Gavii Logo" class="w-20 h-20 object-contain">
+          <img src="assets/GAVII.PNG" alt="Gavii Logo" class="w-36 h-36 object-contain">
           <p class="text-gray-800 text-base">
             <strong>Gavii.ai</strong><br>
             <a href="https://gavii.ai" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline hover:text-blue-800">Company Page</a>
@@ -238,9 +254,7 @@
   
       </div>
     </div>
-  </section>
-  
-  
+  </section>  
 
   <footer class="bg-[#500000] text-white py-6">
     <div class="max-w-6xl mx-auto px-4 text-center">
@@ -253,5 +267,38 @@
       </p>
     </div>
   </footer>
+
+  <!-- JavaScript for Dynamic Nav Bar -->
+  <script>
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      const label = link.querySelector(".nav-label");
+
+      if (href === currentPath) {
+        link.classList.add(
+          "bg-[#6a1a1a]",
+          "text-white",
+          "py-3",
+          "px-6",
+          "rounded-lg"
+        );
+        if (label) label.classList.add("font-bold");
+      } else {
+        link.classList.add("text-white", "hover:bg-[#6a1a1a]", "hover:rounded-lg");
+      }
+    });
+
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("shadow-lg");
+      } else {
+        navbar.classList.remove("shadow-lg");
+      }
+    });
+  </script>
 </body>
 </html>
