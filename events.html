@@ -9,84 +9,121 @@
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body class="bg-white text-gray-900">
-  <header class="navbar">
-    <div class="container">
-      <div class="logo flex items-center space-x-2">
-        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto">
-        <span>AGGIES Lab</span>
+  <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
+    <div class="container mx-auto flex justify-between items-center h-full px-6">
+      <!-- Logo and Site Name -->
+      <div class="logo flex items-center space-x-2 text-white">
+        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded">
+        <span class="font-semibold text-lg">AGGIES Lab</span>
       </div>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="members.html">Members</a>
-        <a href="collaborations.html">Collaborations</a>
-        <a href="board.html">Advisory Board</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="events.html">Success Stories</a>
-        <a href="contact.html">Contact</a>
-        <a href="resources.html">Cyber Resources</a>
+      <!-- Navigation Links -->
+      <nav class="nav-links flex space-x-1 h-full">
+        <a href="index.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Home</span>
+        </a>
+        <a href="members.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Members</span>
+        </a>
+        <a href="collaborations.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Collaborations</span>
+        </a>
+        <a href="board.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Advisory Board</span>
+        </a>
+        <a href="research.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Research</span>
+        </a>
+        <a href="publications.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Publications</span>
+        </a>
+        <a href="events.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Success Stories</span>
+        </a>
+        <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Contact</span>
+        </a>
+        <a href="resources.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Cyber Resources</span>
+        </a>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-12 space-y-16">
-    <section class="py-12 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-          <div class="bg-white rounded-2xl shadow-md p-6 flex items-center space-x-6">
-            <img src="assets/Nvidia.jpg" alt="Nvidia Visit" class="w-24 h-24 object-cover rounded-md">
+  <main class="max-w-6xl mx-auto px-4 py-16 space-y-16">
+    <section class="py-16 rounded-xl">
+      <h2 class="text-4xl font-bold text-[#500000] mb-12 text-center">Recent Events</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <!-- Event Card -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="assets/Nvidia.jpg" alt="Nvidia Visit" class="w-full h-64 object-cover">
+          <div class="p-6">
             <p class="text-gray-800 text-base">
-              <strong>Visit from Nvidia: </strong> The AGGIES Lab hosted a visit from Nvidia, where we discussed potential collaborations in AI and cybersecurity. The team shared insights on the latest advancements in AI technology and its applications in cybersecurity.
+              <strong>Industry Visit:</strong> The AGGIES Lab welcomed a visit from Dr. Rajagopalan, VP of Operations at NVIDIA, who shared valuable career advice and personal anecdotes from the rise of the tech industry.
             </p>
           </div>
-
-          <div class="bg-white shadow-md p-6 flex items-center space-x-6">
-            <img src="lab-photos/USSF2.jpg" alt="USSF" class="w-24 h-24 object-cover rounded-md">
-            <p class="text-gray-800 text-base">
-              <strong>USSF Visit:</strong> Our lab hosted a visit from the United States Space Force, where we discussed ongoing projects and potential collaborations in cybersecurity and AI.
-            </p>
-          </div>
-
-          <div class="bg-white shadow-md p-6 flex items-center space-x-6">
-            <img src="lab-photos/USAF.jpg" alt="USAF" class="w-24 h-24 object-cover rounded-md">
-            <p class="text-gray-800 text-base">
-              <strong>USAF Visit:</strong> The AGGIES Lab hosted a visit from the United States Air Force, where we discussed ongoing projects and potential collaborations in cybersecurity and AI and celebrated the success of completed projects.
-            </p>
-          </div>
-
-          <div class="bg-white shadow-md p-6 flex items-center space-x-6">
-            <img src="lab-photos/srw2.jpg" alt="SRW" class="w-24 h-24 object-cover rounded-md">
-            <p class="text-gray-800 text-base">
-              <strong>Student Research Week: </strong> The AGGIES Lab participated in the Student Research Week, showcasing our research and engaging with the academic community. The team won in several categories, highlighting our commitment to excellence in research.
-            </p>
-          </div>
-
-          <div class="bg-white shadow-md p-6 flex items-center space-x-6">
-            <img src="lab-photos/csce-expo1.jpg" alt="CSExpo" class="w-24 h-24 object-cover rounded-md">
-            <p class="text-gray-800 text-base">
-              <strong>CSCE Expo: </strong>The AGGIES Lab participated in the CSCE Expo, showcasing our latest research and projects. Our team shared insights on cybersecurity and AI, engaging with students and faculty.
-            </p>
-          </div>
-
-          <div class="bg-white shadow-md p-6 flex items-center space-x-6">
-            <img src="assets/GAVII.PNG" alt="Chris Scotti" class="w-24 h-24 object-cover rounded-md">
-            <p class="text-gray-800 text-base">
-              <strong>Chris Scotti: </strong> The AGGIES Lab hosted Chris Scotti, a distinguished speaker from the US Air Force. He shared insights on cybersecurity challenges and advancements in AI technology, fostering discussions on potential collaborations. 
-            </p>
-          </div>
-
-          <div class="bg-white shadow-md p-6 flex items-center space-x-6">
-            <img src="assets/GAVII.PNG" alt="Diwali" class="w-24 h-24 object-cover rounded-md">
-            <p class="text-gray-800 text-base">
-              <strong>Diwali: </strong> The AGGIES Lab celebrated Diwali with a festive gathering. The event included traditional food, music, and dance, fostering a sense of community and cultural appreciation among lab members.
-            </p>
-          </div>
-
         </div>
+  
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="lab-photos/USSF2.jpg" alt="USSF" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <p class="text-gray-800 text-base">
+              <strong>USSF Visit:</strong> Our lab hosted representatives from the United States Space Force to discuss ongoing projects and explore potential collaborations in cybersecurity and artificial intelligence.
+            </p>
+          </div>
+        </div>
+  
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="lab-photos/lackland_afb.webp" alt="USAF" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <p class="text-gray-800 text-base">
+              <strong>Lackland AFB Visit:</strong> Several members toured Lackland Air Force Base, command headquarters of the 16th Air Force. We engaged with defense personnel and explored opportunities for future projects in cybersecurity and AI applications.
+            </p>
+          </div>
+        </div>
+  
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="lab-photos/srw2.jpg" alt="SRW" class="w-full h-64 object-cover object-[center_60%]">
+          <div class="p-6">
+            <p class="text-gray-800 text-base">
+              <strong>Student Research Week:</strong> Our team proudly showcased our research during SRW, fostering meaningful connections within the academic community and winning several award categories.
+            </p>
+          </div>
+        </div>
+  
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="lab-photos/csce-expo1.jpg" alt="CSExpo" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <p class="text-gray-800 text-base">
+              <strong>CSCE Poster Expo:</strong> Our lab presented current and completed research and projects, engaging with students and faculty to discuss innovations in cybersecurity and AI.
+            </p>
+          </div>
+        </div>
+  
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="lab-photos/chris_scotti.jpg" alt="Chris Scotti" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <p class="text-gray-800 text-base">
+              <strong>Guest Speaker:</strong> Hosted Chris Scotti, a distinguished speaker from the US Air Force, to talk about emerging trends within the digital security space.
+            </p>
+          </div>
+        </div>
+  
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <img src="lab-photos/diwali.jpg" alt="Diwali" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <p class="text-gray-800 text-base">
+              <strong>Diwali Celebration:</strong> Our lab came together to celebrate Diwali, honoring culture and community with traditional food, music, and dance.
+            </p>
+          </div>
+        </div>
+  
       </div>
     </section>
   </main>
+  
+  
+  
 
   <footer class="bg-[#500000] text-white py-6">
     <div class="max-w-6xl mx-auto px-4 text-center">
@@ -99,5 +136,39 @@
       </p>
     </div>
   </footer>
+
+  <!-- JavaScript for Dynamic Nav Bar -->
+  <script>
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      const label = link.querySelector(".nav-label");
+
+      if (href === currentPath) {
+        link.classList.add(
+          "bg-[#6a1a1a]",
+          "text-white",
+          "py-3",
+          "px-6",
+          "rounded-lg"
+        );
+        if (label) label.classList.add("font-bold");
+      } else {
+        link.classList.add("text-white", "hover:bg-[#6a1a1a]", "hover:rounded-lg");
+      }
+    });
+
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("shadow-lg");
+      } else {
+        navbar.classList.remove("shadow-lg");
+      }
+    });
+  </script>
+
 </body>
 </html>
