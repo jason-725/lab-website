@@ -1,3 +1,4 @@
+<!-- resources.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,11 +14,15 @@
   <body class="bg-white text-gray-900">
     <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
       <div class="container mx-auto flex justify-between items-center h-full px-6">
-        <!-- Logo and Site Name -->
-        <div class="logo flex items-center space-x-2 text-white">
-          <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded">
-          <span class="font-semibold text-lg">AGGIES Lab</span>
-        </div>
+        <!-- Logo and Site Name (with home page navigation) -->
+      <div class="logo flex items-center space-x-2 text-white">
+        <a href="index.html">
+          <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded hover:opacity-80">
+        </a>
+        <a href="index.html" class="font-semibold text-lg hover:underline">
+          AGGIES Lab
+        </a>
+      </div>
         <!-- Navigation Links -->
         <nav class="nav-links flex space-x-1 h-full">
           <a href="index.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
@@ -41,11 +46,11 @@
           <a href="events.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
             <span class="nav-label">Success Stories</span>
           </a>
-          <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
-            <span class="nav-label">Contact</span>
-          </a>
           <a href="resources.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
             <span class="nav-label">Cyber Resources</span>
+          </a>
+          <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+            <span class="nav-label">Contact Us</span>
           </a>
         </nav>
       </div>
@@ -53,8 +58,8 @@
 
     <main class="max-w-4xl mx-auto py-12 px-4 text-left">
         <h2 class="text-4xl font-bold text-[#500000] mb-6"><br><br>Cybersecurity Resources</h2>
-        <p class="mb-6">Note: The following content is shared solely for security awareness purposes. We are not the original authors, nor do we have any affiliation with the creators of the material.</p>
-        <h3 class="text-2xl font-semibold text-[#500000] mb-4">Cybersecurity Resources</h3>
+        <p class="mb-6">The resources below are shared to help promote cybersecurity awareness for educational purposes. We do not claim authorship to any of the following material.</p>
+        <h3 class="text-2xl font-semibold text-[#500000] mb-4">Web Resources</h3>
         <ul class="list-disc pl-6 mb-8">
           <li>
             <strong>Krebs on Security:</strong><br />
