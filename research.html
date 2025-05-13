@@ -1,3 +1,4 @@
+<!-- research.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,10 +14,14 @@
 <body class="bg-white text-gray-900">
   <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
     <div class="container mx-auto flex justify-between items-center h-full px-6">
-      <!-- Logo and Site Name -->
+      <!-- Logo and Site Name (with home page navigation) -->
       <div class="logo flex items-center space-x-2 text-white">
-        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded">
-        <span class="font-semibold text-lg">AGGIES Lab</span>
+        <a href="index.html">
+          <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded hover:opacity-80">
+        </a>
+        <a href="index.html" class="font-semibold text-lg hover:underline">
+          AGGIES Lab
+        </a>
       </div>
       <!-- Navigation Links -->
       <nav class="nav-links flex space-x-1 h-full">
@@ -41,11 +46,11 @@
         <a href="events.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
           <span class="nav-label">Success Stories</span>
         </a>
-        <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
-          <span class="nav-label">Contact</span>
-        </a>
         <a href="resources.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
           <span class="nav-label">Cyber Resources</span>
+        </a>
+        <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Contact Us</span>
         </a>
       </nav>
     </div>
