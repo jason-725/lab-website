@@ -31,10 +31,14 @@
 <body class="bg-white text-gray-900">
   <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
     <div class="container mx-auto flex justify-between items-center h-full px-6">
-      <!-- Logo and Site Name -->
+      <!-- Logo and Site Name (with home page navigation) -->
       <div class="logo flex items-center space-x-2 text-white">
-        <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded">
-        <span class="font-semibold text-lg">AGGIES Lab</span>
+        <a href="index.html">
+          <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded hover:opacity-80">
+        </a>
+        <a href="index.html" class="font-semibold text-lg hover:underline">
+          AGGIES Lab
+        </a>
       </div>
       <!-- Navigation Links -->
       <nav class="nav-links flex space-x-1 h-full">
@@ -59,11 +63,11 @@
         <a href="events.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
           <span class="nav-label">Success Stories</span>
         </a>
-        <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
-          <span class="nav-label">Contact</span>
-        </a>
         <a href="resources.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
           <span class="nav-label">Cyber Resources</span>
+        </a>
+        <a href="contact.html" class="nav-link px-6 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Contact Us</span>
         </a>
       </nav>
     </div>
@@ -102,9 +106,23 @@
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="pi">
         <img src="./assets/Prof-Kumar-300x260.webp" alt="Prof. Shreyas Kumar" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Shreyas Kumar</h3>
-        <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Professor of Practice<a href = "https://www.linkedin.com/in/shreyas/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <p class="text-[#500000]">
+          <span class="inline-flex items-center justify-center">
+            Professor of Practice
+            <a href="https://www.linkedin.com/in/shreyas/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/linkedin.png" class="w-7 h-7 ml-1">
+            </a>
+          </span>
+        </p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Artificial Intelligence</li>
+            <li>Cybersecurity</li>
+            <li>Cyberwarfare</li>
+          </ul>
+        </details>
       </div>
-
 
       <!-- Graduate Student -->
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
@@ -113,48 +131,112 @@
         </div>
         <h3 class="text-xl font-semibold">Maitreya Niranjan</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Graduate Student<a href = "https://www.linkedin.com/in/mainira/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Artificial Intelligence</li>
+            <li>Machine Learning in Cybersecurity</li>
+            <li>Government Efficiency</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
         <img src="assets/Garg-300x275.webp" alt="Anika Garg" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Anika Garg</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Graduate Student<a href = "https://www.linkedin.com/in/anika-garg/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Cyber-Physical Systems</li>
+            <li>Cyberwarfare</li>
+            <li>Computing and Network Communications</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
         <img src="assets/ArielaMitrani.jpeg" alt="Ariela Mitrani" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Ariela Mitrani</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Graduate Student<a href = "https://www.linkedin.com/in/ariela-mitrani-533341213/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Artificial Intelligence</li>
+            <li>National Security</li>
+            <li>Ethics of War</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
         <img src="assets/rishabh-297x300.webp" alt="Rishabh Pagaria" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Rishabh Pagaria</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Graduate Student<a href = "https://www.linkedin.com/in/rishabhpagaria/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>CyberbioSecurity</li>
+            <li>Maritime Security</li>
+            <li>Artificial Intelligence</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
         <img src="assets/WillemG.jpg" alt="Willem Glenewinkel" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Willem Glenewinkel</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Graduate Student<a href = "https://www.linkedin.com/in/willemglenewinkel/?trk=people_directory" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Cybersecurity</li>
+            <li>AI for Healthcare Security and Privacy</li>
+            <li>National Security</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
         <img src="assets/Dongha.jpg" alt="Dongha Cho" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Dongha Cho</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Graduate Student<a href = "https://www.linkedin.com/in/dongha-cho-952801242/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>AI for Small Businesses</li>
+            <li>National Security</li>
+            <li>Cybersecurity</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
         <img src="assets/Audrey-288x300.webp" alt="Audrey Estrada" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Audrey Estrada</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Graduate Student<a href = "https://www.linkedin.com/in/audrylize/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Hunting Source Code</li>
+            <li>AI for Small Businesses</li>
+            <li>National Security</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="grad">
         <img src="assets/jedidiah_samrajkumar.png" alt="Jedidiah Samrajkumar" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Jedidiah Samrajkumar</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Graduate Student<a href = "https://www.linkedin.com/in/jedi-sam/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>AI and Insurance</li>
+            <li>Cyber Liability</li>
+            <li>Cybersecurity</li>
+          </ul>
+        </details>
       </div>
 
       <!-- Undergraduate Students -->
@@ -162,48 +244,112 @@
         <img src="assets/vince-296x300.webp" alt="Vincent Nguyen" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Vincent Nguyen</h3>
         <p class="text-[#500000]">Undergraduate Researcher</p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Cyber-Physical Systems</li>
+            <li>Artificial Intelligence</li>
+            <li>Cyber-Chemical Warfare</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
         <img src="assets/Anisha-300x290.webp" alt="Anisha Menezes" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Anisha Menezes</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Undergraduate Researcher<a href = "https://www.linkedin.com/in/anisha-menezes/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>AI Powered Phishing Detection</li>
+            <li>Cyber Intelligence Integration</li>
+            <li>Machine Learning in Cybersecurity</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
         <img src="assets/Giri-249x300.webp" alt="Sarthak Giri" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Sarthak Giri</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Undergraduate Researcher<a href = "https://www.linkedin.com/in/sarthak-giri-104335329/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Cybersecurity</li>
+            <li>AI Powered Phishing Detection</li>
+            <li>Machine Learning in Cybersecurity</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
         <img src="assets/Gauri-300x294.webp" alt="Gauri Agrawal" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Gauri Agrawal</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Undergraduate Researcher<a href = "https://www.linkedin.com/in/gauri-agrawal-0baba8321/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>AI in Social Media</li>
+            <li>Cyber Liability</li>
+            <li>AI and Insurance</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
         <img src="assets/Nishika-300x288.webp" alt="Nishika Bajaj" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Nishika Bajaj</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Undergraduate Researcher<a href = "https://www.linkedin.com/in/nishika-bajaj/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>AI in Social Media</li>
+            <li>Social Engineering</li>
+            <li>Cyberwarfare</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
         <img src="assets/serhii-280x300.webp" alt="Serhii Honcharenko" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Serhii Honcharenko</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Undergraduate Researcher<a href = "https://www.linkedin.com/in/serhiih/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Machine Learning in Cybersecurity</li>
+            <li>IoT security</li>
+            <li>AI for Small Businesses</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
         <img src="assets/spahiu-283x300.webp" alt="Armend Spahiu" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Armend Spahiu</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Undergraduate Researcher<a href = "https://www.linkedin.com/in/armend-spahiu-032260329/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>National Security</li>
+            <li>Cybersecurity</li>
+            <li>Artificial Intelligence</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
         <img src="assets/Saravanan-300x300.jpeg" alt="Seshadithya Saravanan" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Seshadithya Saravanan</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Undergraduate Researcher<a href = "https://www.linkedin.com/in/seshadithya/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+        <details class="mt-4 text-left">
+          <summary class="cursor-pointer font-medium text-[#500000]">Research Interests</summary>
+          <ul class="list-disc list-inside mt-2 text-gray-700 text-sm">
+            <li>Post-Quantum Cryptography</li>
+            <li>Quantageddon</li>
+            <li>Cyberwarfar</li>
+          </ul>
+        </details>
       </div>
 
       <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="undergrad">
