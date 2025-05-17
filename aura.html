@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AGGIES Lab | Events</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body class="flex flex-col min-h-screen bg-white text-gray-900">
+    <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
+    <div class="container mx-auto flex justify-between items-center h-full px-6">
+      <!-- Logo and Site Name (with home page navigation) -->
+      <div class="logo flex items-center space-x-2 text-white">
+        <a href="index.html">
+          <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded hover:opacity-80">
+        </a>
+        <a href="index.html" class="font-semibold text-lg hover:underline">
+          AGGIES Lab
+        </a>
+      </div>
+      <!-- Nav Bar Links -->
+      <nav class="nav-links flex space-x-1 h-full">
+        <a href="index.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Home</span>
+        </a>
+        <a href="members.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Members</span>
+        </a>
+        <a href="collaborations.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Collaborations</span>
+        </a>
+        <a href="board.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Advisory Board</span>
+        </a>
+        <a href="research.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Research</span>
+        </a>
+        <a href="publications.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Publications</span>
+        </a>
+        <a href="aura.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Project AURA</span>
+        </a>
+        <a href="events.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Success Stories</span>
+        </a>
+        <a href="resources.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Cyber Resources</span>
+        </a>
+        <a href="contact.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md">
+          <span class="nav-label">Contact Us</span>
+        </a>
+      </nav>
+    </div>
+    </header>
+
+
+    <main class="flex-grow max-w-5xl mx-auto px-4 py-20">
+        <h1 class="text-5xl font-bold text-center mb-12 text-[#500000]"><br><br>Project AURA</h1>
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-10 my-16 max-w-5xl mx-auto px-4">
+
+            <div class="w-full lg:w-1/2 flex justify-center">
+                <img src="./assets/aura.jpg" alt="AURA logo" class="rounded-lg shadow-lg w-full max-w-md">
+            </div>
+
+            <div class="w-full lg:w-1/2 text-left">
+                <h2 class="text-3xl font-bold text-[#500000] mb-4">Aggie Undergraduate Research Association</h2>
+                <p class="text-lg text-gray-700 mb-6">
+                AURA is a student-led organization at Texas A&M University whose goal is to promote and facilitate undergraduate research opportunities in all fields of study. We aim to connect students with faculty members and provide resources to help students succeed in their research goals.
+                </p>
+                <a href="contact.html" class="bg-[#500000] hover:bg-[#6a1a1a] text-white px-6 py-2 rounded-lg text-lg transition">
+                Join Us
+                </a>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="bg-[#500000] text-white py-6">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+        <p>
+        &copy; 2025 
+        <a href="https://shreyas.engr.tamu.edu/aggies/" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">AGGIES Lab</a> |
+        <a href="https://engineering.tamu.edu/cse/index.html" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Department of Computer Science</a> |
+        <a href="https://engineering.tamu.edu/" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">College of Engineering</a> |
+        <a href="https://www.tamu.edu/index.html" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Texas A&M University</a>
+        </p>
+    </div>
+    </footer>
+
+<!-- JavaScript for Dynamic Nav Bar -->
+<script>
+  const links = document.querySelectorAll(".nav-link");
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+    const label = link.querySelector(".nav-label");
+
+    if (href === currentPath) {
+      link.classList.add(
+        "bg-[#6a1a1a]",
+        "text-white",
+        "py-3",
+        "px-6",
+        "rounded-lg"
+      );
+      if (label) label.classList.add("font-bold");
+    } else {
+      link.classList.add("text-white", "hover:bg-[#6a1a1a]", "hover:rounded-lg");
+    }
+  });
+
+  const navbar = document.getElementById("navbar");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      navbar.classList.add("shadow-lg");
+    } else {
+      navbar.classList.remove("shadow-lg");
+    }
+  });
+</script>
+
+</body>
+</html>
