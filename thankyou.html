@@ -1,0 +1,59 @@
+<!-- thankyou.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | AGGIES Lab</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Header -->
+  <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
+    <div class="container mx-auto flex justify-between items-center h-full px-6">
+      <div class="logo flex items-center space-x-2 text-white">
+        <a href="index.html">
+          <img src="assets/logo.jpg" alt="Lab Logo" class="h-12 w-auto rounded hover:opacity-80">
+        </a>
+        <a href="index.html" class="font-semibold text-lg hover:underline">AGGIES Lab</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="pt-32 pb-20 px-6 flex flex-col items-center text-center max-w-2xl mx-auto">
+    <h1 class="text-4xl font-bold text-[#500000] mb-4">Thank You for Contacting AGGIES Lab</h1>
+    <p class="text-lg text-gray-700 mb-10">A representative will be in touch shortly</p>
+    <a href="index.html" class="bg-[#500000] text-white px-6 py-3 rounded-xl hover:bg-[#6a1a1a] transition-all duration-200">Return Home</a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#500000] text-white py-6">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <p>
+        &copy; 2025 
+        <a href="https://shreyas.engr.tamu.edu/aggies/" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">AGGIES Lab</a> |
+        <a href="https://engineering.tamu.edu/cse/index.html" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Department of Computer Science</a> |
+        <a href="https://engineering.tamu.edu/" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">College of Engineering</a> |
+        <a href="https://www.tamu.edu/index.html" class="underline hover:text-gray-300" target="_blank" rel="noopener noreferrer">Texas A&M University</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Navbar Highlight Script -->
+  <script>
+    const navbar = document.getElementById("navbar");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        navbar.classList.add("shadow-lg");
+      } else {
+        navbar.classList.remove("shadow-lg");
+      }
+    });
+  </script>
+
+</body>
+</html>
