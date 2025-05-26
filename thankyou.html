@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="assets/styles.css">
   <link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
-<body class="bg-white text-gray-900 min-h-screen flex flex-col justify-between">
+
+<body class="bg-white text-gray-900 min-h-screen flex flex-col">
 
   <!-- Header -->
   <header id="navbar" class="bg-[#500000] shadow h-16 flex items-center fixed top-0 w-full z-50 transition-shadow duration-300">
@@ -19,14 +20,29 @@
         </a>
         <a href="index.html" class="font-semibold text-lg hover:underline">AGGIES Lab</a>
       </div>
+      <!-- Nav Bar Links -->
+      <nav class="nav-links flex space-x-1 h-full overflow-x-auto whitespace-nowrap max-w-full scrollbar-hide">
+        <a href="index.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Home</span></a>
+        <a href="members.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Members</span></a>
+        <a href="collaborations.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Collaborations</span></a>
+        <a href="board.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Advisory Board</span></a>
+        <a href="research.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Research</span></a>
+        <a href="publications.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Publications</span></a>
+        <a href="events.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Success Stories</span></a>
+        <a href="aura.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Project AURA</span></a>
+        <a href="resources.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Cyber Resources</span></a>
+        <a href="contact.html" class="nav-link px-3 py-2 h-full inline-flex items-center justify-center rounded-md"><span class="nav-label">Contact Us</span></a>
+      </nav>
     </div>
   </header>
 
   <!-- Main Content -->
-  <main class="pt-32 pb-20 px-6 flex flex-col items-center text-center max-w-4xl mx-auto">
-    <h1 class="text-5xl font-bold text-[#500000] mb-3 whitespace-nowrap">Thank You for Contacting AGGIES Lab</h1>
-    <p class="text-lg italic text-gray-700 mb-10">A representative will be in touch shortly</p>
-    <a href="index.html" class="bg-[#500000] text-white px-6 py-3 rounded-xl hover:bg-[#6a1a1a] transition-all duration-200">Return Home</a>
+  <main class="flex-grow flex items-center justify-center pt-32 pb-20 px-6 text-center">
+    <div>
+      <h1 class="text-5xl font-bold text-[#500000] mb-3 whitespace-nowrap">Thank You for Contacting AGGIES Lab</h1>
+      <p class="text-lg italic text-gray-700 mb-10">A representative will be in touch shortly</p>
+      <a href="index.html" class="bg-[#500000] text-white px-6 py-3 rounded-xl hover:bg-[#6a1a1a] transition-all duration-200">Return Home</a>
+    </div>
   </main>
 
   <!-- Footer -->
@@ -44,6 +60,21 @@
 
   <!-- Navbar Highlight Script -->
   <script>
+    const links = document.querySelectorAll(".nav-link");
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+      const label = link.querySelector(".nav-label");
+
+      if (href === currentPath) {
+        link.classList.add("bg-[#6a1a1a]", "text-white", "py-3", "px-6", "rounded-lg");
+        if (label) label.classList.add("font-bold");
+      } else {
+        link.classList.add("text-white", "hover:bg-[#6a1a1a]", "hover:rounded-lg");
+      }
+    });
+
     const navbar = document.getElementById("navbar");
     window.addEventListener("scroll", () => {
       if (window.scrollY > 0) {
