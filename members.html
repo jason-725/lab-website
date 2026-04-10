@@ -96,6 +96,9 @@
       <button id="btn-undergrad" onclick="filterTeam('undergrad')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
         <span class="filter-label">Undergraduates <span id="count-undergrad" class="ml-1 text-sm font-normal"></span></span>
       </button>
+      <button id="btn-staff" onclick="filterTeam('co-founders')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
+          <span class="filter-label">Co-Founders <span id="count-staff" class="ml-1 text-sm font-normal"></span></span>
+      </button>
       <button id="btn-affiliates" onclick="filterTeam('affiliates')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
         <span class="filter-label">Affiliates <span id="count-affiliates" class="ml-1 text-sm font-normal"></span></span>
       </button>
@@ -1451,7 +1454,7 @@
         }
       }
       window.onload = () => {
-        const roles = ['pi', 'grad', 'undergrad', 'affiliates', 'alumni', 'future'];
+        const roles = ['pi', 'grad', 'undergrad', 'co-founders', 'affiliates', 'alumni', 'future'];
         let total = 0;
         roles.forEach(role => {
           const count = document.querySelectorAll(`[data-role="${role}"]`).length;
