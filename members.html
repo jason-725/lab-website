@@ -99,6 +99,9 @@
       <button id="btn-staff" onclick="filterTeam('co-founders')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
           <span class="filter-label">Co-Founders<span id="count-staff" class="ml-1 text-sm font-normal"></span></span>
       </button>
+      <button id="btn-staff" onclick="filterTeam('co-authors')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
+          <span class="filter-label">Co-Authors<span id="count-staff" class="ml-1 text-sm font-normal"></span></span>
+      </button>
       <button id="btn-affiliates" onclick="filterTeam('affiliates')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
         <span class="filter-label">Affiliates<span id="count-affiliates" class="ml-1 text-sm font-normal"></span></span>
       </button>
@@ -910,7 +913,7 @@
         </div>
       </div>
 
-  <!-- 4 grid section -->
+  <!-- 4 grid section: Co-Founders -->
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
     <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="co-founders">
         <img src="assets/Giri-249x300.webp" alt="Sarthak Giri" class="w-32 h-32 mx-auto object-cover mb-4">  
@@ -934,6 +937,33 @@
         <img src="assets/Shrutwik.jpeg" alt="Shrutwik Muppa" class="w-32 h-32 mx-auto object-cover mb-4">
         <h3 class="text-xl font-semibold">Shrutwik Muppa</h3>
         <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Co-Founders<a href = "https://www.linkedin.com/in/shrutwikmuppa/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+      </div>
+  </div>
+
+  <!-- 4 grid section: Co-Authors -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+    <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="co-authors">
+        <img src="assets/Anisha-300x290.webp" alt="Anisha Menezes" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Anisha Menezes</h3>
+        <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Co-Authors<a href = "https://www.linkedin.com/in/anisha-menezes/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a><a href="https://scholar.google.com/citations?hl=en&user=qNBclzUAAAAJ" target="_blank" rel="noopener noreferrer"><img src="assets/google-scholar.png" class="w-7 h-7 ml-2"></a></span></p>
+      </div>
+
+    <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="co-authors">
+        <img src="assets/Gauri-300x294.webp" alt="Gauri Agrawal" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Gauri Agrawal</h3>
+        <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Co-Authors<a href = "https://www.linkedin.com/in/gauri-agrawal-0baba8321/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+      </div>
+
+    <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="co-authors">
+        <img src="assets/Andre.jpg" alt="Andre Mordi" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Andre Mordi</h3>
+        <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Co-Authors<a href = "https://www.linkedin.com/in/andremordi/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+      </div>
+
+    <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="co-authors">
+       <img src="assets/JashanjodhBajwa.jpg" alt="Jashanjodh Bajwa" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Jashanjodh Bajwa</h3>
+        <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">Co-Authors<a href = "https://www.linkedin.com/in/jashanjodh-bajwa-31894231b/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
       </div>
   </div>
 
@@ -1398,7 +1428,7 @@
         }
       }
       window.onload = () => {
-        const roles = ['pi', 'grad', 'undergrad', 'co-founders', 'affiliates', 'alumni', 'future'];
+        const roles = ['pi', 'grad', 'undergrad', 'co-founders', 'co-authors', 'affiliates', 'alumni', 'future'];
         let total = 0;
         roles.forEach(role => {
           const count = document.querySelectorAll(`[data-role="${role}"]`).length;
