@@ -102,6 +102,9 @@
       <button id="btn-staff" onclick="filterTeam('co-authors')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
           <span class="filter-label">Co-Authors<span id="count-staff" class="ml-1 text-sm font-normal"></span></span>
       </button>
+      <button id="btn-staff" onclick="filterTeam('491+')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
+          <span class="filter-label">491+<span id="count-staff" class="ml-1 text-sm font-normal"></span></span>
+      </button>
       <button id="btn-affiliates" onclick="filterTeam('affiliates')" class="filter-btn bg-[#500000] text-white px-4 py-2 rounded-xl hover:bg-[#6a1a1a]">
         <span class="filter-label">Affiliates<span id="count-affiliates" class="ml-1 text-sm font-normal"></span></span>
       </button>
@@ -909,6 +912,32 @@
       </div>
   </div>
 
+  <!-- 4 grid section: 491+ -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+    <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="491+">
+        <img src="assets/Oscar Leon.png" alt="Oscar leon" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Oscar Leon</h3>
+        <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">491+<a href = "https://www.linkedin.com/in/oscar-leon-986152175/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+      </div>
+
+    <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="491+">
+        <img src="assets/Nicole_Overend.png" alt="Nicole Overend" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Nicole Overend</h3>
+        <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">491+<a href = "https://www.linkedin.com/in/nicole-overend-1b5697316/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+      </div>
+
+    <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="491+">
+        <img src="assets/Michael_Ades.png" alt="Michael Ades" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Michael Ades</h3>
+        <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">491+<a href = "https://www.linkedin.com/in/michael-ades/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+      </div>
+
+    <div class="bg-white border rounded-xl shadow p-4 text-center" data-role="491+">
+       <img src="assets/Tristan Kingsley.jpeg" alt="Tristan Kingsley" class="w-32 h-32 mx-auto object-cover mb-4">
+        <h3 class="text-xl font-semibold">Tristan Kingsley</h3>
+        <p class="text-[#500000]"> <span class="inline-flex items-center justify-center">491+<a href = "https://www.linkedin.com/in/tristankingsley/" target="_blank" rel="noopener noreferrer"><img src = "assets/linkedin.png" class="w-7 h-7 ml-1"></a></span></p>
+      </div>
+  </div>
 
     <!-- 3 grid section -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
@@ -1370,7 +1399,7 @@
         }
       }
       window.onload = () => {
-        const roles = ['pi', 'grad', 'undergrad', 'co-founders', 'co-authors', 'affiliates', 'alumni', 'future'];
+        const roles = ['pi', 'grad', 'undergrad', 'co-founders', 'co-authors', '491+', 'affiliates', 'alumni', 'future'];
         let total = 0;
         roles.forEach(role => {
           const count = document.querySelectorAll(`[data-role="${role}"]`).length;
