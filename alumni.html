@@ -69,13 +69,16 @@
   <main class="max-w-6xl mx-auto px-4 pt-28 pb-16">
 
     <!-- Page Header -->
-    <h1 class="text-4xl font-bold text-[#500000] mb-4">
+    <h1 class="text-4xl font-bold text-[#500000] mb-8">
       Alumni
     </h1>
 
-    <!-- Undergraduate Alumni -->
-    <h2 class="text-3xl font-bold text-[#500000] mb-8">Undergraduate Alumni</h2>
-    <div class="space-y-8 mb-16">
+    <!-- Two Column Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Left Column: Undergraduate Alumni -->
+      <div>
+        <h2 class="text-3xl font-bold text-[#500000] mb-8">Undergraduate Alumni</h2>
+        <div class="space-y-8">
       
       <!-- Ethan Curb -->
       <div class="bg-white border rounded-xl shadow p-8 flex flex-col md:flex-row gap-8 items-start">
@@ -186,10 +189,12 @@
       </div>
 
     </div>
+      </div>
 
-    <!-- Graduate Alumni -->
-    <h2 class="text-3xl font-bold text-[#500000] mb-8 mt-12">Graduate Alumni</h2>
-    <div class="space-y-8">
+      <!-- Right Column: Graduate Alumni -->
+      <div>
+        <h2 class="text-3xl font-bold text-[#500000] mb-8">Graduate Alumni</h2>
+        <div class="space-y-8">
 
       <!-- Ariela Mitrani (Graduate) -->
       <div class="bg-white border rounded-xl shadow p-8 flex flex-col md:flex-row gap-8 items-start">
@@ -380,6 +385,8 @@
         </div>
       </div>
 
+        </div>
+      </div>
     </div>
   </main>
 
