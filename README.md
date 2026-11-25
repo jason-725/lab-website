@@ -8,13 +8,13 @@ Feel free to view the website [here]([url](https://www.aggieslab.org/)).
 
 Structure
 
-Home: Main page of the lab
-Members: Faculty, students, and affiliate 
-Collaborations: Internal and external collaborations
-Advisory Board: Mentors and advisors 
-Research: Poster highlights
-Publications: Ongoing and published work
-Success Stories: Recent events and socials
-Project AURA: Undergraduate research group
-Cyber Resources: Links to learn more
-Contact Us: Communication details
+Home: Main page of the lab<br>
+Members: Faculty, students, and affiliate<br>
+Collaborations: Internal and external collaborations<br>
+Advisory Board: Mentors and advisors<br> 
+Research: Poster highlights<br>
+Publications: Ongoing and published work<br>
+Success Stories: Recent events and socials<br>
+Project AURA: Undergraduate research group<br>
+Cyber Resources: Links to learn more<br>
+Contact Us: Communication details<br>
