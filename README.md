@@ -9,12 +9,14 @@ Feel free to view the website [here]([url](https://www.aggieslab.org/)).
 Structure
 
 Home: Main page of the lab<br>
-Members: Faculty, students, and affiliate<br>
+Members: Faculty, students, and affiliates<br>
+Alumni: Recent graduates<br>
 Collaborations: Internal and external collaborations<br>
 Advisory Board: Mentors and advisors<br> 
-Research: Poster highlights<br>
+Research: Funding grans and research highlights<br>
 Publications: Ongoing and published work<br>
 Success Stories: Recent events and socials<br>
-Project AURA: Undergraduate research group<br>
+Serving Texas: State research contributions<br>
+Millionaire By Graduation: AGGIES Lab startup incubator<br>
 Cyber Resources: Links to learn more<br>
 Contact Us: Communication details<br>
